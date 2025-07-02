@@ -206,6 +206,7 @@ type Customer struct {
 	IsPrivatePerson                        bool           `json:"IsPrivatePerson"`
 	IsNorthernIreland                      bool           `json:"IsNorthernIreland,omitempty"`
 	DiscountPercentage                     float64        `json:"DiscountPercentage,omitempty"`
+	PropertyReference                      string         `json:"PropertyReference,omitempty"`
 	ChangedUtc                             DateTime       `json:"ChangedUtc,omitempty"`
 	IsActive                               bool           `json:"IsActive,omitempty"`
 	ForceBookkeepVat                       bool           `json:"ForceBookkeepVat,omitempty"`
