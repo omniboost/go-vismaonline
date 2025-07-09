@@ -35,6 +35,9 @@ func (r CustomerledgeritemswithvoucherPost) NewQueryParams() *Customerledgeritem
 }
 
 type CustomerledgeritemswithvoucherPostQueryParams struct {
+	UseAutomaticVATCalculation bool `schema:"useAutomaticVatCalculation"`
+	UseDefaultVATCodes         bool `schema:"useDefaultVatCodes"`
+	UseDefaultVoucherSeries    bool `schema:"useDefaultVoucherSeries"`
 }
 
 func (p CustomerledgeritemswithvoucherPostQueryParams) ToURLValues() (url.Values, error) {
