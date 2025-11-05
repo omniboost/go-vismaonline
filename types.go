@@ -462,3 +462,23 @@ func (i CustomerLedgerItem) MarshalJSON() ([]byte, error) {
 func (i CustomerLedgerItem) IsEmpty() bool {
 	return zero.IsZero(i)
 }
+
+type CostCenters []CostCenter
+
+type CostCenter struct {
+	ID       string          `json:"Id"`
+	Name     string          `json:"Name"`
+	Number   int             `json:"Number"`
+	IsActive bool            `json:"IsActive"`
+	Items    CostCenterItems `json:"Items,omitempty"`
+}
+
+type CostCenterItems []CostCenterItem
+type CostCenterItem struct {
+	ID           string   `json:"Id"`
+	CostCenterID string   `json:"CostCenterId"`
+	Name         string   `json:"Name"`
+	ShortName    string   `json:"ShortName"`
+	IsActive     bool     `json:"IsActive"`
+	CreatedUTC   DateTime `json:"CreatedUtc"`
+}
